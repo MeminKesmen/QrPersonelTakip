@@ -16,7 +16,7 @@ namespace QrPersonelTakip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KullaniciYonetim());
+            Application.Run(new Giris());
         }
     }
 }

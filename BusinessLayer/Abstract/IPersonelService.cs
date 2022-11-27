@@ -16,5 +16,6 @@ namespace BusinessLayer.Abstract
         bool Update(string pId, string ad, string soyAd, string tc, string tel, string adres, string maas, string dTarih, string mail, string qr, string resim, int meslekId);
         bool Delete(string personelId);
         bool QrYenile(string personelId,string qr);
+        void QrGonder(Personels personel);
     }
 }
