@@ -128,6 +128,7 @@
             // 
             // txtDepartmanId
             // 
+            this.txtDepartmanId.Enabled = false;
             this.txtDepartmanId.Location = new System.Drawing.Point(158, 34);
             this.txtDepartmanId.Name = "txtDepartmanId";
             this.txtDepartmanId.Size = new System.Drawing.Size(140, 20);
@@ -235,6 +236,7 @@
             // 
             // txtMeslekId
             // 
+            this.txtMeslekId.Enabled = false;
             this.txtMeslekId.Location = new System.Drawing.Point(157, 34);
             this.txtMeslekId.Name = "txtMeslekId";
             this.txtMeslekId.Size = new System.Drawing.Size(140, 20);

@@ -20,7 +20,7 @@ namespace QrPersonelTakip
         }
         IzinManager izinManager = new IzinManager();
         PersonelManager personelManager = new PersonelManager();
-        IzinManager izinManager2 = new IzinManager();
+        
         List<Izins> izinler;
         List<Personels> personeller;
         
@@ -40,9 +40,10 @@ namespace QrPersonelTakip
         }
         void Listele()
         {
-            izinler = izinManager2.GetAll();
+            izinler = izinManager.GetAll();
             personeller = personelManager.GetAll();
             PersonelIzinAra();
+            PersonelAra();
         }
         void PersonelIzinAra()
         {

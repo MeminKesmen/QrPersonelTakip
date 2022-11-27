@@ -11,8 +11,8 @@ namespace BusinessLayer.Concrete
     public static class MailGonder
     {
         public static string Gonderen = "QrTakipProje";
-        public static string mail = "y.e.d.e.k.00@hotmail.com";
-        public static string sifre = "yedeksifre123";
+        public static string mail = "mail";
+        public static string sifre = "sifre";
         public static void Microsoft(string AliciMail, string Baslik, string icerik, string ek)
         {
             

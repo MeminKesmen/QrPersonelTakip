@@ -22,7 +22,7 @@ namespace QrPersonelTakip
         }
         DepartmanManager departmanManager = new DepartmanManager();
         MeslekManager meslekManager = new MeslekManager();
-        MeslekManager meslekManager2 = new MeslekManager();
+        
     
         private void DepartmanYonetim_Load(object sender, EventArgs e)
         {
@@ -64,7 +64,7 @@ namespace QrPersonelTakip
             
             var departmanlar = departmanManager.GetAll().Select(x => new { x.DepartmanID, x.DepartmanAd }).ToList();
             /*var meslekler = meslekManager.GetAll();*//*.Select(x => new { x.MeslekID, x.MeslekAd, x.Departmen.DepartmanAd }).ToList();*/
-            var meslekler = meslekManager2.GetAll().Select(x => new { x.MeslekID, x.MeslekAd, x.Departmen.DepartmanAd }).ToList();
+            var meslekler = meslekManager.GetAll().Select(x => new { x.MeslekID, x.MeslekAd, x.Departmen.DepartmanAd }).ToList();
             dataGridViewMeslek.DataSource = meslekler;
             dataGridViewDepartman.DataSource = departmanlar;
 

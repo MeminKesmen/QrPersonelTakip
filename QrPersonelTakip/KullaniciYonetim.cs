@@ -20,7 +20,7 @@ namespace QrPersonelTakip
         }
         YetkiManager yetkiManager = new YetkiManager();
         KullaniciManager kullaniciManager = new KullaniciManager();
-        KullaniciManager kullaniciManager2 = new KullaniciManager();
+        
         PersonelManager personelManager = new PersonelManager();
         List<Personels> personeller;
         private void KullaniciYonetim_Load(object sender, EventArgs e)
@@ -30,14 +30,14 @@ namespace QrPersonelTakip
         void Listele()
         {
             var yetkiler = yetkiManager.GetAll().Select(x => new { x.YetkiID, x.YetkiAd }).ToList();
-            var kullanicilar = kullaniciManager2.GetAll().Select(x => new { x.KullaniciID, x.KullaniciAd, x.KullaniciSifre, AdSoyad = x.Personels.PersonelAd + " " + x.Personels.PersonelSoyad, x.Yetkis.YetkiAd }).ToList();
+            var kullanicilar = kullaniciManager.GetAll().Select(x => new { x.KullaniciID, x.KullaniciAd, x.KullaniciSifre, AdSoyad = x.Personels.PersonelAd + " " + x.Personels.PersonelSoyad, x.Yetkis.YetkiAd }).ToList();
             personeller = personelManager.GetAll();
             dataGridViewYetkiler.DataSource = yetkiler;
             dataGridViewKullanicilar.DataSource = kullanicilar;
             cmbYetkiler.ValueMember = "YetkiID";
             cmbYetkiler.DisplayMember = "YetkiAd";
             cmbYetkiler.DataSource = yetkiler;
-
+            PersonelAra();
         }
         void YetkiEkle()
         {
